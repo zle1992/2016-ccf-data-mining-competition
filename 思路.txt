@@ -21,4 +21,17 @@ countvector：计算词频
 tfidfvector: 计算tfidf作为权重值
 hashvector: 利用hash 算法将单词映射到向量空间
 文本分类：
-我们测试了nactive b
+经测试，SVM比其他分类器如贝叶斯，knn等分类算法好，所有我采用的是SVM
+
+
+
+在特征提取的时候，我们担心数据过拟合，所以进行特征选择
+我们的特征选择的方法主要是卡方跟LDA主题模型
+但是经过测试，LDA+TFIDF的效果不如单纯的tfidf
+TFIDF+卡方的效果稍好一点点
+
+最终我们的方法：
+1.jieba分词
+2.特征提取：tfidf
+3.特征选择：卡方
+4.分类：SVM
