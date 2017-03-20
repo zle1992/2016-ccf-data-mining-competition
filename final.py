@@ -316,7 +316,7 @@ def main():
         test()
     if(sys.argv[1]=="write"):
     	write()
-    if(sys.argv[1]=="write"):
+    if(sys.argv[1]=="optimize"):
    		optimize()
 
 if __name__ == '__main__':
